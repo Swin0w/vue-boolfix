@@ -17,12 +17,7 @@ function init() {
         .then(data => {
           this.films = data.data.results;
           console.log(data.data.results);
-          switch (this.film.original_language) {
-            case "en":
-              this.films.original_language = "U+1F3F4";
-              break;
-            default:
-
+          this.films[vote_average] == "<i class="fas fa-star"></i>"";
           }
         })
       }
