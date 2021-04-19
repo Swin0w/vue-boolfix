@@ -17,10 +17,14 @@ function init() {
         .then(data => {
           this.films = data.data.results;
           console.log(data.data.results);
-          // this.films[vote_average] == "<i class="fas fa-star"></i>"";
-                  
         })
+      },
+      convertMarksToStars: function(marks) {
+        console.log(marks);
+        marks = parseInt(marks / 2);
+        return marks;
       }
+
     }
   });
 }

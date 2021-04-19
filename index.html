@@ -28,7 +28,12 @@
           <p>{{elem.title}}</p>
           <p>{{elem.original_title}}</p>
           <p>{{elem.original_language}}</p>
-          <p>{{elem.vote_average}}</p>
+          <span>{{convertMarksToStars(elem.vote_average)}}</span>
+          <!-- <span>{{convertMarksToStars(elem.vote_average)}}</span> -->
+          <span>
+            <i class="fas fa-star" v-for="star in convertMarksToStars(elem.vote_average)"></i>
+            <i class="far fa-star" v-for="star in (5 - convertMarksToStars(elem.vote_average))"></i>
+          </span>
         </li>
       </ul>
       <h2 v-else>Ops.. La tua ricerca non è andata a buon fine</h2>
