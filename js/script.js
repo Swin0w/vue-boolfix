@@ -1,7 +1,11 @@
 function init() {
   new Vue({
     mounted() {
-      axios.get('')
+      axios.get('', {
+        params: {
+          api_key: '',
+        }
+      })
     }
   });
 }
