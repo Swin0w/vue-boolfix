@@ -2,10 +2,12 @@
 <html lang="it" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title>Boolfix</title>
+    <title>Boolflix</title>
     <!-- FONT -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap" rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Vue.js -->
@@ -16,6 +18,15 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </head>
   <body>
-    <script type="text/javascript" href="js/script.js"></script>
+    <div id="app">
+      <input type="text" value="Fast and Furious" placeholder="Ricerca.." v-model="search">
+      <button type="button" name="button" @click="clicked">
+        <i class="fas fa-search"></i>
+      </button>
+      <ul>
+        <li v-if="clicked" v-for="elem in films">{{elem.title}}</li>
+      </ul>
+    </div>
+    <script type="text/javascript" src="js/script.js"></script>
   </body>
 </html>
