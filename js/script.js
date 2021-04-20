@@ -8,8 +8,11 @@ function init() {
       flags: {
         it: "flag/it_flag.png",
         es: "flag/es_flag.png",
-        en: "flag/en_flag.png"
-      }
+        en: "flag/en_flag.png",
+        ja: "flag/jp_flag.png",
+        fr: "flag/fr_flag.png"
+      },
+      isInArray: false
     },
     methods: {
       clicked: function() {
@@ -40,6 +43,8 @@ function init() {
         console.log(marks);
         marks = parseInt(marks / 2);
         return marks;
+      },
+      arrayIn: function () {
       }
     }
   });

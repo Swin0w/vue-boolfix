@@ -44,6 +44,7 @@ main {
 #flex-cards {
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
 }
 .cards {
   background-color: #262626;
@@ -64,6 +65,7 @@ footer {
   border-top: 7px solid #666666;
   height: 80px;
   text-align: center;
+  padding: 10px 0;
 }
 footer h3 {
   color: red;

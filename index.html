@@ -38,11 +38,19 @@
         <div class="contain">
           <div class="flex">
             <ul id="flex-cards" v-if="search.length > 0">
-              <li v-for="elem in films">
+              <li v-for="elem in films, series">
                 <div class="cards">
                   <img :src="'https://image.tmdb.org/t/p/w342' + elem.poster_path" alt="Immagine di copertina del film">
-                  <p><b>Titolo: </b>{{elem.title}}</p>
-                  <p><b>Titolo originale: </b>{{elem.original_title}}</p>
+                  <p>
+                    <b>Titolo: </b>
+                    {{elem.title}}
+                    {{elem.name}}
+                  </p>
+                  <p>
+                    <b>Titolo originale: </b>
+                    {{elem.original_title}}
+                    {{elem.original_name}}
+                  </p>
                   <span><b>Lingua oringinale: </b></span>
                   <img v-if="flags[elem.original_language]" :src="flags[elem.original_language]" alt="">
                   <span v-else>{{elem.original_language}}</span>
@@ -52,6 +60,14 @@
                     <i class="fas fa-star" v-for="star in convertMarksToStars(elem.vote_average)"></i>
                     <i class="far fa-star" v-for="star in (5 - convertMarksToStars(elem.vote_average))"></i>
                   </span>
+                  <!-- <p v-if="elem.title">
+                    <b>Tipologia:</b>
+                    FILM
+                  </p>
+                  <p v-if="elem.name">
+                    <b>Tipologia:</b>
+                    SERIE TV
+                  </p> -->
                 </div>
               </li>
             </ul>
