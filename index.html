@@ -36,11 +36,13 @@
       </header>
       <ul v-if="search.length > 0">
         <li v-for="elem in films">
+          <img :src="elem.poster_path" alt="">
           <p><b>Titolo: </b>{{elem.title}}</p>
           <p><b>Titolo originale: </b>{{elem.original_title}}</p>
+          <span><b>Lingua oringinale: </b></span>
           <img v-if="flags[elem.original_language]" :src="flags[elem.original_language]" alt="">
-          <p v-else><b>Lingua oringinale: </b>{{elem.original_language}}</p>
-          <span><b>Votazione: </b></span>
+          <p v-else>{{elem.original_language}}</p>
+          <p><b>Votazione: </b></p>
           <span>{{convertMarksToStars(elem.vote_average)}}</span>
           <!-- <span>{{convertMarksToStars(elem.vote_average)}}</span> -->
           <span>
