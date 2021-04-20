@@ -37,10 +37,38 @@ header {
 }
 /* CORPO PRINCIPALE DELLA PAGINA */
 main {
+  min-height: calc(100vh - 160px);
   background-color: #000;
   color: white;
-  height: calc(100vh - 80px);
+}
+#flex-cards {
+  display: flex;
+  flex-flow: row wrap;
+}
+.cards {
+  background-color: #262626;
+  padding: 10px;
+  margin: 30px 20px;
+}
+.cards img:nth-of-type(2){
+  vertical-align: middle;
+  width: 24px;
+  height: 24px;
 }
 .fa-star{
   color: #ffbf00;
+}
+/* PIE' DI PAGINA */
+footer {
+  background-color: #262626;
+  border-top: 7px solid #666666;
+  height: 80px;
+  text-align: center;
+}
+footer h3 {
+  color: red;
+}
+footer p {
+  color: white;
+  font-size: 12pt;
 }
