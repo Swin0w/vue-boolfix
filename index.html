@@ -60,14 +60,14 @@
                     <i class="fas fa-star" v-for="star in convertMarksToStars(elem.vote_average)"></i>
                     <i class="far fa-star" v-for="star in (5 - convertMarksToStars(elem.vote_average))"></i>
                   </span>
-                  <!-- <p v-if="elem.title">
+                  <p v-if="elem.title">
                     <b>Tipologia:</b>
                     FILM
                   </p>
-                  <p v-if="elem.name">
+                  <p v-else>
                     <b>Tipologia:</b>
                     SERIE TV
-                  </p> -->
+                  </p>
                 </div>
               </li>
             </ul>
