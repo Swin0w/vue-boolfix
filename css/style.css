@@ -31,13 +31,17 @@ header {
 #title h1{
   color: #ff1717;
 }
+#title img {
+  width: 200px;
+  height: 60px;
+}
 #search {
   vertical-align: middle;
   line-height: 50px;
 }
 /* CORPO PRINCIPALE DELLA PAGINA */
 main {
-  min-height: calc(100vh - 160px);
+  min-height: calc(100vh - 200px);
   background-color: #000;
   color: white;
 }
@@ -63,7 +67,7 @@ main {
 footer {
   background-color: #262626;
   border-top: 7px solid #666666;
-  height: 80px;
+  height: 120px;
   text-align: center;
   padding: 10px 0;
 }
@@ -73,4 +77,8 @@ footer h3 {
 footer p {
   color: white;
   font-size: 12pt;
+}
+footer img {
+  width: 220px;
+  height: 60px;
 }
