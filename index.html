@@ -34,24 +34,30 @@
           </div>
         </div>
       </header>
-      <ul v-if="search.length > 0">
-        <li v-for="elem in films">
-          <img :src="elem.poster_path" alt="">
-          <p><b>Titolo: </b>{{elem.title}}</p>
-          <p><b>Titolo originale: </b>{{elem.original_title}}</p>
-          <span><b>Lingua oringinale: </b></span>
-          <img v-if="flags[elem.original_language]" :src="flags[elem.original_language]" alt="">
-          <p v-else>{{elem.original_language}}</p>
-          <p><b>Votazione: </b></p>
-          <span>{{convertMarksToStars(elem.vote_average)}}</span>
-          <!-- <span>{{convertMarksToStars(elem.vote_average)}}</span> -->
-          <span>
-            <i class="fas fa-star" v-for="star in convertMarksToStars(elem.vote_average)"></i>
-            <i class="far fa-star" v-for="star in (5 - convertMarksToStars(elem.vote_average))"></i>
-          </span>
-        </li>
-      </ul>
-      <h2 v-else>Ops.. La tua ricerca non è andata a buon fine</h2>
+      <main>
+        <div class="contain">
+          <div class="flex">
+            <ul v-if="search.length > 0">
+              <li v-for="elem in films">
+                <img :src="elem.poster_path" alt="">
+                <p><b>Titolo: </b>{{elem.title}}</p>
+                <p><b>Titolo originale: </b>{{elem.original_title}}</p>
+                <span><b>Lingua oringinale: </b></span>
+                <img v-if="flags[elem.original_language]" :src="flags[elem.original_language]" alt="">
+                <p v-else>{{elem.original_language}}</p>
+                <p><b>Votazione: </b></p>
+                <span>{{convertMarksToStars(elem.vote_average)}}</span>
+                <!-- <span>{{convertMarksToStars(elem.vote_average)}}</span> -->
+                <span>
+                  <i class="fas fa-star" v-for="star in convertMarksToStars(elem.vote_average)"></i>
+                  <i class="far fa-star" v-for="star in (5 - convertMarksToStars(elem.vote_average))"></i>
+                </span>
+              </li>
+            </ul>
+            <p v-else>Errore: La tua ricerca non ha prodotto risultati</p>
+          </div>
+        </div>
+      </main>
     </div>
     <script type="text/javascript" src="js/script.js"></script>
   </body>
