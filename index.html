@@ -38,9 +38,10 @@
         <div class="contain">
           <div class="flex">
             <ul id="flex-cards" v-if="search.length > 0">
-              <li v-for="elem in films, series">
+              <li v-for="elem in allFilms">
                 <div class="cards">
-                  <img :src="'https://image.tmdb.org/t/p/w342' + elem.poster_path" alt="Immagine di copertina del film">
+                  <img v-if="elem.poster_path != null" :src="'https://image.tmdb.org/t/p/w342' + elem.poster_path" alt="Immagine di copertina del film">
+                  <img v-else src="img/default.png" alt="">
                   <p>
                     <b>Titolo: </b>
                     {{elem.title}}
