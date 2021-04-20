@@ -3,7 +3,12 @@ function init() {
     el: '#app',
     data: {
       search: '',
-      films: []
+      films: [],
+      flags: {
+        it: "flag/it_flag.png",
+        es: "flag/es_flag.png",
+        en: "flag/en_flag.png"
+      }
     },
     methods: {
       clicked: function() {

@@ -19,15 +19,27 @@
   </head>
   <body>
     <div id="app">
-      <input type="text" value="" placeholder="Ricerca.." v-model="search">
-      <button type="button" name="button" @click="clicked">
-        <i class="fas fa-search"></i>
-      </button>
+      <header>
+        <div class="contain">
+          <div class="flex">
+            <div id="title">
+              <h1>B O O L F L I X</h1>
+            </div>
+            <div id="search">
+              <input type="text" value="" placeholder="Ricerca.." v-model="search">
+              <button type="button" name="button" @click="clicked">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </header>
       <ul v-if="search.length > 0">
         <li v-for="elem in films">
           <p><b>Titolo: </b>{{elem.title}}</p>
           <p><b>Titolo originale: </b>{{elem.original_title}}</p>
-          <p><b>Lingua oringinale: </b>{{elem.original_language}}</p>
+          <img v-if="flags[elem.original_language]" :src="flags[elem.original_language]" alt="">
+          <p v-else><b>Lingua oringinale: </b>{{elem.original_language}}</p>
           <span><b>Votazione: </b></span>
           <span>{{convertMarksToStars(elem.vote_average)}}</span>
           <!-- <span>{{convertMarksToStars(elem.vote_average)}}</span> -->

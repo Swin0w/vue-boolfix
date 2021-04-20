@@ -7,9 +7,32 @@
 body {
   font-family: 'Mukta', sans-serif;
 }
-
 li {
   list-style: none;
+}
+.contain {
+  width: 98%;
+  margin: 0 auto;
+}
+.flex {
+  display: flex;
+  flex-flow: row wrap;
+}
+/* HEADER */
+header {
+  background-color: #262626;
+  padding: 10px 0;
+  border-bottom: 7px solid #666666;
+}
+#title {
+  flex-grow: 1;
+}
+#title h1{
+  color: #ff1717;
+}
+#search {
+  vertical-align: middle;
+  line-height: 50px;
 }
 .fa-star{
   color: #ffbf00;
