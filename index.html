@@ -25,9 +25,10 @@
       </button>
       <ul v-if="search.length > 0">
         <li v-for="elem in films">
-          <p>{{elem.title}}</p>
-          <p>{{elem.original_title}}</p>
-          <p>{{elem.original_language}}</p>
+          <p><b>Titolo: </b>{{elem.title}}</p>
+          <p><b>Titolo originale: </b>{{elem.original_title}}</p>
+          <p><b>Lingua oringinale: </b>{{elem.original_language}}</p>
+          <span><b>Votazione: </b></span>
           <span>{{convertMarksToStars(elem.vote_average)}}</span>
           <!-- <span>{{convertMarksToStars(elem.vote_average)}}</span> -->
           <span>

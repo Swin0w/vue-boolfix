@@ -24,7 +24,6 @@ function init() {
         marks = parseInt(marks / 2);
         return marks;
       }
-
     }
   });
 }

@@ -1,3 +1,13 @@
+/* IMPOSTAZIONI GENERALI DI VISUALIZZAZIONE DELLA PAGINA */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Mukta', sans-serif;
+}
+
 li {
   list-style: none;
 }
